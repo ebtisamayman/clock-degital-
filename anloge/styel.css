@@ -1,0 +1,82 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #b76969;
+}
+
+.clock {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 10px solid #000;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.center {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background-color: #000;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.hand {
+    position: absolute;
+    width: 50%;
+    height: 30px;
+    background-color: black;
+    top: 50%;
+    left: 20px;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: transform 0.05s linear;
+}
+
+.hand.hour {
+    width: 43%;
+    height: 8px;
+    background-color: #333;
+}
+
+.hand.minute {
+    width: 43%;
+    height: 6px;
+    background-color: #555;
+}
+
+.hand.second {
+    width: 45%;
+    height: 2px;
+    background-color: red;
+}
+
+/* وضع الأرقام */
+.number {
+    position: absolute;
+    font-size: 30px;
+   
+   font-weight: 500;
+    color: #000;
+}
+
+.number:nth-child(1)  { top: 5%; left: 50%; transform: translateX(-50%); } /* 12 */
+.number:nth-child(2)  { top: 15%; left: 85%; transform: translateY(-50%); } /* 1 */
+.number:nth-child(3)  { top: 35%; left: 96%; transform: translateY(-50%); } /* 2 */
+.number:nth-child(4)  { top: 50%; left: 95%; transform: translateY(-50%); } /* 3 */
+.number:nth-child(5)  { top: 65%; left: 87%; transform: translateY(-50%); } /* 4 */
+.number:nth-child(6)  { top: 85%; left: 70%; transform: translateY(-50%); } /* 5 */
+.number:nth-child(7)  { top: 93%; left: 50%; transform: translateX(-50%); } /* 6 */
+.number:nth-child(8)  { top: 85%; left: 30%; transform: translateY(-50%); } /* 7 */
+.number:nth-child(9)  { top: 65%; left: 12%; transform: translateY(-50%); } /* 8 */
+.number:nth-child(10) { top: 50%; left: 5%; transform: translateY(-50%); } /* 9 */
+.number:nth-child(11) { top: 35%; left: 4%; transform: translateY(-50%); } /* 10 */
+.number:nth-child(12) { top: 15%; left: 15%; transform: translateY(-50%); } /* 11 */
